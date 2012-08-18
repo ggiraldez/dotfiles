@@ -1,0 +1,33 @@
+[submodule "vim/bundle/vim-colors-solarized"]
+	path = vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/bundle/rdark"]
+	path = vim/bundle/rdark
+	url = https://github.com/vim-scripts/rdark.git
+[submodule "vim/bundle/oceandeep"]
+	path = vim/bundle/oceandeep
+	url = https://github.com/vim-scripts/oceandeep.git
+[submodule "vim/bundle/railscasts-theme"]
+	path = vim/bundle/railscasts-theme
+	url = https://github.com/vim-scripts/Railscasts-Theme-GUIand256color.git
+[submodule "vim/bundle/VimClojure"]
+	path = vim/bundle/VimClojure
+	url = https://github.com/vim-scripts/VimClojure.git
+[submodule "vim/bundle/zencoding"]
+	path = vim/bundle/zencoding
+	url = https://github.com/mattn/zencoding-vim.git
+[submodule "vim/bundle/snipmate"]
+	path = vim/bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
+[submodule "vim/bundle/minibufexpl"]
+	path = vim/bundle/minibufexpl
+	url = https://github.com/fholgado/minibufexpl.vim.git
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/bundle/ctrlp"]
+	path = vim/bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/bundle/paredit"]
+	path = vim/bundle/paredit
+	url = https://github.com/vim-scripts/paredit.vim.git
