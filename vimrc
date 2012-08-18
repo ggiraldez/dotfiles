@@ -69,7 +69,7 @@ let g:vimclojure#WantNailgun = 1
 let g:vimclojure#SplitPos = "top"
 let g:vimclojure#SplitSize = 10
 
-" Configuración de ZenCoding
+" ZenCoding
 let g:user_zen_settings = {
             \  'indentation': '  '
             \}
@@ -100,13 +100,7 @@ nmap <C-PageDown> :bnext<CR>
 nmap <F3> :cn<CR>
 nmap <S-F3> :cp<CR>
 
-" Sesiones
-set sessionoptions=blank,buffers,curdir,localoptions,resize,tabpages
-map <leader>S :mks! ~/.vim/sessions/default
-map <leader>L :source ~/.vim/sessions/default
-
-" Configuraciones específicas para tipos de archivo
-" au BufNewFile,BufRead *.js call s:JsSnippets()
+" File types configurations
 au BufNewFile,BufRead *.{gsp,html} setl sw=2 sts=2 ts=2
 au FileType ruby setl sw=2 sts=2 ts=2
 au FileType yaml setl sw=2 sts=2 ts=2
@@ -114,7 +108,4 @@ au FileType lua setl sw=2 sts=2 ts=2
 au BufNewFile,BufRead *.less set filetype=less
 au BufNewFile,BufRead *.thor set filetype=ruby
 au BufNewFile,BufRead [Cc]apfile set filetype=ruby
-
-au! BufRead,BufWrite,BufWritePost,BufNewFile *.org
-au BufEnter *.org call org#SetOrgFileType()
 
