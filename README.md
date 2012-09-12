@@ -1,6 +1,6 @@
 # Installation
 
-<code>
+<pre>
 $ cd Projects
 $ git clone ssh://git@github.com/ggiraldez/dotfiles
 $ cd dotfiles
@@ -10,7 +10,7 @@ $ mv ~/.vimrc ~/.vimrc.backup
 $ mv ~/.vim ~/.vim.backup
 $ ln -s vimrc ~/.vimrc
 $ ln -s vim ~/.vim
-</code>
+</pre>
 
 Voila!
 
