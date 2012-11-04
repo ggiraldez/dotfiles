@@ -46,7 +46,7 @@ filetype plugin indent on
 " Appearence
 if has("gui_running")
     " set gfn=Droid\ Sans\ Mono\ 9
-    set gfn=Ubuntu\ Mono\ 10
+    set gfn=Ubuntu\ Mono\ 11
     " set background=light
     " colorscheme oceandeep
     " colorscheme desert
