@@ -55,6 +55,8 @@ if has("gui_running")
     let rdark_current_line = 1
     colorscheme rdark
     set cursorline
+    set guioptions-=T
+    set guioptions-=m
 else
     set background=dark
     " colorscheme default
