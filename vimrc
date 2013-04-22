@@ -46,7 +46,8 @@ filetype plugin indent on
 " Appearence
 if has("gui_running")
     " set gfn=Droid\ Sans\ Mono\ 9
-    set gfn=Ubuntu\ Mono\ 11
+    set gfn=Ubuntu\ Mono\ 12
+    set g:dwm_master_pane_width=85
     " set background=light
     " colorscheme oceandeep
     " colorscheme desert
@@ -58,10 +59,10 @@ if has("gui_running")
     set guioptions-=T
     set guioptions-=m
 else
-    set background=dark
-    " colorscheme default
+    set background=light
+    colorscheme default
     set cursorline
-    colorscheme solarized
+    " colorscheme solarized
 endif
 
 " VimClojure
@@ -102,11 +103,16 @@ nmap <C-PageDown> :bnext<CR>
 nmap <F3> :cn<CR>
 nmap <S-F3> :cp<CR>
 
+" Open line above in insert mode
+imap <C-o> <ESC>O
+
 " File types configurations
 au BufNewFile,BufRead *.{gsp,html} setl sw=2 sts=2 ts=2
 au FileType ruby setl sw=2 sts=2 ts=2
 au FileType yaml setl sw=2 sts=2 ts=2
 au FileType lua setl sw=2 sts=2 ts=2
+au FileType sass setl sw=2 sts=2 ts=2
+au FileType coffee setl sw=2 sts=2 ts=2
 au BufNewFile,BufRead *.less set filetype=less
 au BufNewFile,BufRead *.thor set filetype=ruby
 au BufNewFile,BufRead [Cc]apfile set filetype=ruby
