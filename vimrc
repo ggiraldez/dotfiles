@@ -47,7 +47,7 @@ filetype plugin indent on
 if has("gui_running")
     " set gfn=Droid\ Sans\ Mono\ 9
     set gfn=Ubuntu\ Mono\ 12
-    set g:dwm_master_pane_width=85
+    let g:dwm_master_pane_width=85
     " set background=light
     " colorscheme oceandeep
     " colorscheme desert
@@ -65,13 +65,6 @@ else
     " colorscheme solarized
 endif
 
-" VimClojure
-let g:vimclojure#ParenRainbow = 1
-let g:vimclojure#NailgunClient = $HOME."/bin/ng"
-let g:vimclojure#WantNailgun = 1
-let g:vimclojure#SplitPos = "top"
-let g:vimclojure#SplitSize = 10
-
 " ZenCoding
 let g:user_zen_settings = {
             \  'indentation': '  '
@@ -87,7 +80,7 @@ let g:miniBufExplModSelTarget = 1
 
 " Shortcuts
 let mapleader = ","
-let maplocalleader = "º"
+let maplocalleader = "\\"
 nmap <silent> <leader>h :silent :nohlsearch<CR>
 nmap <silent> <leader>s :set nolist!<CR>
 
@@ -103,7 +96,9 @@ nmap <C-PageDown> :bnext<CR>
 nmap <F3> :cn<CR>
 nmap <S-F3> :cp<CR>
 
-" Open line above in insert mode
+" Open line above and below in insert mode
+imap <M-o> <ESC>o
+imap <C-Enter> <ESC>o
 imap <C-o> <ESC>O
 
 " File types configurations
@@ -116,4 +111,10 @@ au FileType coffee setl sw=2 sts=2 ts=2
 au BufNewFile,BufRead *.less set filetype=less
 au BufNewFile,BufRead *.thor set filetype=ruby
 au BufNewFile,BufRead [Cc]apfile set filetype=ruby
+
+" Rainbow parenthesis
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
