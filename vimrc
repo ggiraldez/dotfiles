@@ -91,6 +91,8 @@ nmap <leader>r :CtrlPMRU<CR>
 
 nmap <leader>n :NERDTreeToggle<CR>
 
+nmap <leader>( :RainbowParenthesesToggleAll<CR>
+
 nmap <C-PageUp> :bprev<CR>
 nmap <C-PageDown> :bnext<CR>
 nmap <F3> :cn<CR>
