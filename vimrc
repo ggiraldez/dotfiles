@@ -45,8 +45,8 @@ filetype plugin indent on
 
 " Appearence
 if has("gui_running")
-    " set gfn=Droid\ Sans\ Mono\ 9
-    set gfn=Ubuntu\ Mono\ 12
+    set gfn=Droid\ Sans\ Mono\ 10
+    "set gfn=Ubuntu\ Mono\ 12
     let g:dwm_master_pane_width=85
     " set background=light
     " colorscheme oceandeep
@@ -78,11 +78,15 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 
+" Ctrl-P
+let g:ctrlp_max_height = 20
+
 " Shortcuts
 let mapleader = ","
 let maplocalleader = "\\"
 nmap <silent> <leader>h :silent :nohlsearch<CR>
 nmap <silent> <leader>s :set nolist!<CR>
+nmap <silent> <leader>w :set wrap!<CR>
 
 nmap <leader>f :CtrlP<CR>
 nmap <leader>F :CtrlPCurWD<CR>
