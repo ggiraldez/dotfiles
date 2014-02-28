@@ -25,9 +25,9 @@ set nolazyredraw
 set backspace=indent,eol,start
 set autoindent
 set expandtab
-set shiftwidth=4
-set tabstop=4
-set sts=4
+set shiftwidth=2
+set tabstop=2
+set sts=2
 
 " Other options
 set hidden
@@ -38,6 +38,7 @@ set wildmode=list:longest
 set shortmess=atI
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.swp,*.class,*.pyc
 set wildignore+=*/build/*
+set autoread
 
 " Filetypes
 filetype on
@@ -45,7 +46,10 @@ filetype plugin indent on
 
 " Appearence
 if has("gui_running")
-    set gfn=Droid\ Sans\ Mono\ 10
+    set lines=50
+    set columns=140
+    set gfn=Droid\ Sans\ Mono:h13
+    "set gfn=Menlo:h13
     "set gfn=Ubuntu\ Mono\ 12
     let g:dwm_master_pane_width=85
     " set background=light
@@ -54,7 +58,7 @@ if has("gui_running")
     " colorscheme railscasts
     " colorscheme solarized
     let rdark_current_line = 1
-    colorscheme rdark
+    colorscheme codeschool
     set cursorline
     set guioptions-=T
     set guioptions-=m
@@ -114,9 +118,15 @@ au FileType yaml setl sw=2 sts=2 ts=2
 au FileType lua setl sw=2 sts=2 ts=2
 au FileType sass setl sw=2 sts=2 ts=2
 au FileType coffee setl sw=2 sts=2 ts=2
+au FileType go setl noet sw=8 ts=8 sts=8
 au BufNewFile,BufRead *.less set filetype=less
 au BufNewFile,BufRead *.thor set filetype=ruby
 au BufNewFile,BufRead [Cc]apfile set filetype=ruby
+au BufNewFile,BufRead *.gradle setf groovy
+" au BufNewFile,BufRead *.cr setf ruby
+au BufNewFile,BufRead *.axlsx setf ruby
+au BufNewFile,BufRead *.html.hbs setf html
+au BufNewFile,BufRead *.go setf go
 
 " Rainbow parenthesis
 au VimEnter * RainbowParenthesesToggle
