@@ -67,3 +67,9 @@
 [submodule "vim/bundle/vim-crystal"]
 	path = vim/bundle/vim-crystal
 	url = https://github.com/rhysd/vim-crystal
+[submodule "vim/bundle/vim-erlang-skeletons"]
+	path = vim/bundle/vim-erlang-skeletons
+	url = https://github.com/vim-erlang/vim-erlang-skeletons
+[submodule "vim/bundle/vimerl"]
+	path = vim/bundle/vimerl
+	url = https://github.com/jimenezrick/vimerl
