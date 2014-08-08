@@ -2,8 +2,34 @@
 
 set nocompatible
 
-call pathogen#infect()
-call pathogen#helptags()
+" Vundle setup
+filetype off
+set runtimepath+=~/.vim/bundle/vundle
+call vundle#begin()
+
+Plugin 'gmarik/vundle'
+Plugin 'rking/ag.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/paredit.vim'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'tpope/vim-bundler'
+Plugin 'guns/vim-clojure-static'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'rhysd/vim-crystal'
+Plugin 'tpope/vim-fireplace'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'groenewege/vim-less'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'jimenezrick/vimerl'
+Plugin 'mattn/emmet-vim'
+
+" Finished Vundle setup
+call vundle#end()
 
 " Search options
 set ignorecase
