@@ -40,6 +40,9 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.swp,*.class,*.pyc
 set wildignore+=*/build/*
 set autoread
 
+" Other plugins
+runtime! ftplugin/man.vim
+
 " Filetypes
 filetype on
 filetype plugin indent on
@@ -58,7 +61,7 @@ if has("gui_running")
     " colorscheme railscasts
     " colorscheme solarized
     let rdark_current_line = 1
-    colorscheme codeschool
+    colorscheme jellybeans
     set cursorline
     set guioptions-=T
     set guioptions-=m
@@ -85,6 +88,12 @@ let g:miniBufExplModSelTarget = 1
 " Ctrl-P
 let g:ctrlp_max_height = 20
 
+" Erlang plugins
+let g:erl_author="Gustavo Giráldez"
+let g:erl_company="Manas"
+let g:erl_replace_buffer=1
+" let g:erl_tpl_dir="~/.vim/templates/erlang"
+
 " Shortcuts
 let mapleader = ","
 let maplocalleader = "\\"
@@ -92,8 +101,8 @@ nmap <silent> <leader>h :silent :nohlsearch<CR>
 nmap <silent> <leader>s :set nolist!<CR>
 nmap <silent> <leader>w :set wrap!<CR>
 
-nmap <leader>f :CtrlP<CR>
-nmap <leader>F :CtrlPCurWD<CR>
+nmap <leader>f :CtrlPCurWD<CR>
+nmap <leader>F :CtrlPCur<CR>
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>r :CtrlPMRU<CR>
 
