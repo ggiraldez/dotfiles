@@ -7,17 +7,27 @@ filetype off
 set runtimepath+=~/.vim/bundle/vundle
 call vundle#begin()
 
+" Vundle itself
 Plugin 'gmarik/vundle'
+
+" General utility and navigation
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'nanotech/jellybeans.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'bling/vim-airline'
+
+" Editing plugins
 Plugin 'vim-scripts/paredit.vim'
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdcommenter'
+
+" Language support
 Plugin 'tpope/vim-bundler'
 Plugin 'guns/vim-clojure-static'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'rhysd/vim-crystal'
 Plugin 'tpope/vim-fireplace'
 Plugin 'pangloss/vim-javascript'
@@ -26,7 +36,14 @@ Plugin 'groenewege/vim-less'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'jimenezrick/vimerl'
-Plugin 'mattn/emmet-vim'
+
+" Colorschemes
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'tomasr/molokai'
+Plugin 'chriskempson/base16-vim'
+Plugin 'chriskempson/vim-tomorrow-theme'
+
 
 " Finished Vundle setup
 call vundle#end()
@@ -77,39 +94,28 @@ filetype plugin indent on
 if has("gui_running")
     set lines=50
     set columns=140
-    set gfn=Droid\ Sans\ Mono:h13
-    "set gfn=Menlo:h13
-    "set gfn=Ubuntu\ Mono\ 12
-    let g:dwm_master_pane_width=85
-    " set background=light
-    " colorscheme oceandeep
-    " colorscheme desert
-    " colorscheme railscasts
-    " colorscheme solarized
+    set gfn=Droid\ Sans\ Mono:h15
+    "set gfn=Menlo:h15
     let rdark_current_line = 1
-    colorscheme jellybeans
+    set background=dark
+    colorscheme base16-tomorrow
     set cursorline
     set guioptions-=T
     set guioptions-=m
 else
     set background=light
-    colorscheme default
+    colorscheme Tomorrow
     set cursorline
     " colorscheme solarized
 endif
 
-" ZenCoding
-let g:user_zen_settings = {
-            \  'indentation': '  '
-            \}
-
-let g:snips_author = 'Gustavo Giráldez'
-
-" MiniBufferExplorer
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
+" Airline
+if has("gui_running")
+  set gfn=Droid\ Sans\ Mono\ for\ Powerline:h15
+  let g:airline_powerline_fonts = 1
+endif
+let g:airline#extensions#tabline#enabled = 1
+set laststatus=2
 
 " Ctrl-P
 let g:ctrlp_max_height = 20
